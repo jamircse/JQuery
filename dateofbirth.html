@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date of birth</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+
+<br>
+<form action="#">
+   Date of birth :
+   <select name="Year" id="Year">
+       <option> Year</option>
+       <script>
+           for (i=2021; i>=1900; i--)  
+            {  
+             document.write("<option value="+i+">"+i+"</option>");
+            }
+       </script>
+   </select>
+      <select name="Month" id="month">
+       <option> Month</option>
+       <script>
+           var month=['January','February','March','April','May','June','July','August','September','October','November','December'];
+           for(i=0;i<month.length;i++)  
+            {  
+            document.write("<option value="+month[i]+">"+month[i]+"</option>");
+            }
+       </script>
+   </select>
+      <select name="date" id="date">
+            <option> Date</option>
+       <script>
+           for (i=1; i<=31; i++)  
+            {  
+              document.write("<option value="+i+">"+i+"</option>");
+            }
+       </script>
+   </select>
+</form>
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+ 
+        
+    });
+</script>
+</body>
+</html>
