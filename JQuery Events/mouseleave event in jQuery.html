@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Executing a Function on Hover Event in jQuery</title>
+    <style type="text/css">
+        p {
+            padding: 20px;
+            font: 20px sans-serif;
+            background: #f2f2f2;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Place mouse pointer on me.</p>
+
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("p").mouseleave(function(){
+                $(this).addClass("highlight");
+            });
+            $("p").mouseenter(function(){
+                $(this).removeClass("highlight");
+            });
+            
+
+        });
+    </script>
+    <code style="font-size:18px;font-family:cursive;">
+        <b>
+
+            $(document).ready(function(){ <br>
+            // Some code to be executed... <br>
+            $("p").mouseenter(function(){ <br>
+            $(this).addClass("highlight");<br>
+            }  <br>
+            $("p").mouseleave(function(){ <br>
+            $(this).removeClass("highlight"); <br>
+            }); <br>
+            <br>
+            }); <br>
+        </b>
+    </code>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Run code on keyup event in jQuery</title>
+</head>
+<body>
+<input type="text"> <br>
+<span>0</span> <br>
+<p>keyup</p>
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var i = 0;
+    $('input[type="text"]').keypress(function(){
+        $("span").text(i += 1);
+        $("p").show().fadeOut();
+    });
+        
+    });
+</script>
+</body>
+</html>

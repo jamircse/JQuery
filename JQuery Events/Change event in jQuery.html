@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Run code on key change event in jQuery</title>
+</head>
+<body>
+<span></span><br>
+<form action="#">
+    <select name="city" id="city">
+        <option value="" >Select city</option>
+        <option value="Dhaka">Dhaka</option>
+        <option value="Khulna">khulna</option>
+        <option value="Borisal">Borisal</option>
+        <option value="Chittagong">Chittagong</option>
+        <option value="Sylhate">Sylhate</option>
+    </select>
+</form>
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+     $("#city").change(function(){
+         $select_op=$(this).find(":selected").val();
+        $("span").text($select_op);
+     });
+    
+        
+    });
+</script>
+</body>
+</html>

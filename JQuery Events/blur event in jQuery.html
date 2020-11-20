@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Run code on key change event in jQuery</title>
+    <style>
+     label{
+        display: block;
+        margin: 5px 0;
+    }
+    label span{
+        display: none;
+    }
+    
+    </style>
+</head>
+<body>
+<span></span><br>
+<form action="#">
+   <label for="Name">Name 
+    <input type="text"> <span>blur fire</span></label><br>
+    <label for="password">Password 
+    <input type="password"> <span>blur fire</span> </label><br>
+    <label for="signin">Signin <input type="submit" value="submit"></label>
+</form>
+ 
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+     $("input").blur(function(){
+          $(this).next("span").show().fadeOut("slow");
+         $(this).css("border","1px solid red");
+         
+         
+     });
+    
+        
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change text contents of the elements on button click using jQuery</title>
+</head>
+<body>
+    <h1 style="font-size:18px;font-family:cursive;">hello world !</h1>
+    <button class="btn">Double Click </button>  <br>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+     $(document).ready(function(){
+
+             $(".btn").dblclick(function(){ 
+
+                $("h1").css("color", "#0088ff");
+             });
+
+         
+         
+        });
+</script>
+<code style="font-size:18px;font-family:cursive;">
+  <b>
+  
+   $(document).ready(function(){ <br>
+			// Some code to be executed...  <br>
+			   $(".btn").dblclick(function(){ <br>
+                $("h1").slideToggle(10);    <br>
+             }); <br>
+		});    <br>
+   </b>
+</code>
+
+</body>
+</html>
