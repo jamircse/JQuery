@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecting Element</title>
+</head>
+
+<body>
+   
+   <script src="js/jquery.js"></script>
+    <code>
+        <b>Selecting Elements by ID</b> <br>
+        $( "#myId" ); // Note IDs must be unique per page. <br> <br>
+        <b>Selecting Elements by Class Name </b> <br>
+        $( ".myClass" ); <br> <br>
+        <b>Selecting Elements by Attribute</b> <br>
+        $( "input[name='first_name']" ); <br> <br>
+        <b>Selecting Elements by Compound CSS Selector </b> <br>
+        $( "#contents ul.people li" ); <br> <br>
+        <b>Selecting Elements with a Comma-separated List of Selectors</b>  <br>
+        $( "div.myClass, ul.people" );
+        <br>   <br>
+      <b>  // Refining selections. </b>  <br>
+        $( "div.foo" ).has( "p" ); // div.foo elements that contain tags <br>
+            $( "h1" ).not( ".bar" ); // h1 elements that don't have a class of bar  <br>
+            $( "ul li" ).filter( ".current" ); // unordered list items with class of  current  <br>
+            $( "ul li" ).first(); // just the first unordered list item  <br>
+            $( "ul li" ).eq( 5 ); // the sixth   <br>
+            <br>
+            <br>
+            <b>Working with Selections</b>  <br>
+            $( "h1" ).html( "hello world" );   <br>
+            $( "h1" ).html().addClass( "test" );   <br>
+            <br>
+            <b>Chaining</b> <br>
+            $( "#content" ).find( "h3" ).eq( 2 ).html( "new text for the third h3!" ); <br>
+            <br>
+            $( "#content" )  <br>
+                     .find( "h3" )   <br>
+                     .eq( 2 )   <br>
+                     .html( "new text for the third h3!" ); <br>
+                     <br>
+              $( "#content" )  <br>
+                     .find( "h3" )  <br>
+                     .eq( 2 )   <br>
+                     .html( "new text for the third h3!" )   <br>
+                     .end() // Restores the selection to all h3s in #content   <br>
+                     .eq( 0 )   <br>
+                     .html( "new text for the first h3!" );   <br> <br>
+    </code>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecting Element 2</title>
+</head>
+
+<body>
+
+    <script src="js/jquery.js"></script>
+    <code>
+    <b>    // Selecting an element's direct parent: </b> <br>
+
+        // returns [ div.child ] <br>
+        $( "span.subchild" ).parent(); <br>
+
+        // Selecting all the parents of an element that match a given selector: <br>
+
+        // returns [ div.parent ] <br>
+        $( "span.subchild" ).parents( "div.parent" ); <br>
+
+        // returns [ div.child, div.parent, div.grandparent ] <br>
+        $( "span.subchild" ).parents(); <br>
+
+        // Selecting all the parents of an element up to, but *not including* the selector: <br>
+
+        // returns [ div.child, div.parent ] <br>
+        $( "span.subchild" ).parentsUntil( "div.grandparent" ); <br>
+
+        // Selecting the closest parent, note that only one parent will be selected <br>
+        // and that the initial element itself is included in the search: <br>
+
+        // returns [ div.child ] <br>
+        $( "span.subchild" ).closest( "div" ); <br> <br>
+
+
+        // returns [ div.child ] as the selector is also included in the search: <br>
+        $( "div.child" ).closest( "div" ); <br>
+        <br>
+        <b>Children</b> <br> <br>
+      <b>  // Selecting an element's direct children: </b> <br>
+
+        // returns [ div.parent, div.surrogateParent1, div.surrogateParent2 ] <br>
+        $( "div.grandparent" ).children( "div" ); <br>
+
+        // Finding all elements within a selection that match the selector: <br>
+
+        // returns [ div.child, div.parent, div.surrogateParent1, div.surrogateParent2 ] <br>
+        $( "div.grandparent" ).find( "div" ); <br>
+        <b>siblings</b> <br> <br>
+        // Selecting a next sibling of the selectors:  <br>
+
+        // returns [ div.surrogateParent1 ]  <br>
+        $( "div.parent" ).next();  <br>
+
+        // Selecting a prev sibling of the selectors:  <br>
+
+        // returns [] as No sibling exists before div.parent   <br>
+        $( "div.parent" ).prev();   <br>
+
+        // Selecting all the next siblings of the selector:   <br>
+
+        // returns [ div.surrogateParent1, div.surrogateParent2 ]  <br>
+        $( "div.parent" ).nextAll();   <br>
+
+        // returns [ div.surrogateParent1 ]  <br>
+        $( "div.parent" ).nextAll().first();   <br>
+
+        // returns [ div.surrogateParent2 ]  <br>
+        $( "div.parent" ).nextAll().last();   <br>
+
+        // Selecting all the previous siblings of the selector:   <br>
+
+        // returns [ div.surrogateParent1, div.parent ]  <br>
+        $( "div.surrogateParent2" ).prevAll();   <br>
+
+        // returns [ div.surrogateParent1 ]   <br>
+        $( "div.surrogateParent2" ).prevAll().first();  <br>
+
+        // returns [ div.parent ]   <br>
+        $( "div.surrogateParent2" ).prevAll().last();  <br>
+        // Selecting an element's siblings in both directions that matches the given selector: <br>
+
+        // returns [ div.surrogateParent1, div.surrogateParent2 ]  <br>
+        $( "div.parent" ).siblings(); <br>
+
+        // returns [ div.parent, div.surrogateParent2 ]  <br>
+        $( "div.surrogateParent1" ).siblings();  br
+    </code>
+</body>
+
+</html>
